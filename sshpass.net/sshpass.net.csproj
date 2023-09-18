@@ -11,6 +11,15 @@
     <Copyright>Copyright (c) 2023</Copyright>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>SSHPass.NET</Title>
+    <RepositoryUrl>https://github.com/computercodeblue/sshpass.net</RepositoryUrl>
+    <PackageTags>automation;command;ssh</PackageTags>
+    <PackAsTool>True</PackAsTool>
+    <ToolCommandName>sshpass.net</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <PackageLicenseExpression> GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
