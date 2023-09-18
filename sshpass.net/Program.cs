@@ -30,6 +30,7 @@
 
 using Mono.Options;
 using Renci.SshNet;
+using System.Reflection;
 
 namespace sshpass.net
 {
@@ -139,14 +140,13 @@ namespace sshpass.net
             if (arguments.ShowVersion || arguments.Verbose)
             {
                 Console.WriteLine("sshpass.net:");
-                Console.WriteLine("  Version 1.0.0");
+                Console.WriteLine($"  Version {Assembly.GetEntryAssembly()?.GetName().Version}");
                 Console.WriteLine("  (C) 2023 Computer Code Blue LLC");
                 Console.WriteLine("Based on sshpass");
                 Console.WriteLine("  (C) 2006-2011 Lingnu Open Source Consulting Ltd.");
                 Console.WriteLine("  (C) 2015-2016, 2021-2022 Shachar Shemesh");
                 Console.WriteLine("This program is free software, and can be distributed under the terms of the GPL.");
                 Console.WriteLine("See the LICENSE file for more information.");
-                Console.WriteLine();
                 if (arguments.ShowVersion) return;
             }
 

@@ -3,6 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <Company>Computer Code Blue LLC</Company>
+    <Authors>Christopher C. Burke</Authors>
+    <ProductName>sshpass.net</ProductName>
+    <Copyright>Copyright (c) 2023</Copyright>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
