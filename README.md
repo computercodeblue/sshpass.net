@@ -13,7 +13,7 @@ Contents
 
 ### Why?
 
-I needed a tool to automate sending a command to a remote server via ssh, and public key authentication, while better (see [Security Considerations](#security) below), was an inconvenient option.
+I needed a tool to automate sending a command to a remote server via ssh, and public key authentication, while better (see [Security Considerations](#security) below), was an inconvenient option. The original `sshpass` is a C program written for POSIX operating systems and doesn't work for Windows and I needed this specifically for a Windows client PC. As it turns out, using the SSH.NET and Mono.Options libraries made writing a dotnet version relatively simple.
 
 ### Installation
 ---
