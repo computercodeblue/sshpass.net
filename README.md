@@ -36,10 +36,10 @@ dotnet tool install --global --add-source ./sshpass.net/nupkg sshpass.net
 ### Usage
 ---
 
-Note that `sshpass.net` is not designed to be interactive, it is designed to pass a password to a remote ssh server as part of a script. That said, you can simply run `sshpass.net user@host [remote command]` and get a password prompt, like you would if you used `ssh`. Public key authentication is also supported, like with `ssh`.
+Note that `sshpass.net` is not designed to be interactive, it is designed to pass a password to a remote ssh server as part of a script. That said, you can simply run `sshpass-net user@host [remote command]` and get a password prompt, like you would if you used `ssh`. Public key authentication is also supported, like with `ssh`.
 
 ```shell
-Usage: sshpass.net [OPTIONS]+ command parameters
+Usage: sshpass-net [OPTIONS]+ command parameters
 Pass a password to ssh for automation.
 Basic usage: sshpass.net user@host command. Password is accepted via STDIN.
 
@@ -73,13 +73,13 @@ The `-p` option should be considered the least secure of all of sshpass's option
 #### Execute `uptime` Via Password Stored in Text File
 
 ```cmd
-sshpass.net -f pw.txt user@host.example.com uptime
+sshpass-net -f pw.txt user@host.example.com uptime
 ``` 
 
 sshpass.net can also read from STDIN. The `-q` switch it optional and will suppress the password prompt. You can use either a redirect or pipe.
 
 ```cmd
-sshpass.net -q user@host.example.com uptime < pw.txt
+sshpass-net -q user@host.example.com uptime < pw.txt
 ```
 
 ```cmd
@@ -90,11 +90,11 @@ cat pw.txt | sshpass.net -q user@host.example.com uptime
 
 ```cmd
 set SSHPASS=password
-sshpass.net -e user@host.example.com uptime
+sshpass-net -e user@host.example.com uptime
 ``` 
 
 #### Execute `uptime` Via Password Stored in a Key File
 
 ```cmd
-sshpass.net -k ./private.key user@host.example.com uptime
+sshpass-net -k ./private.key user@host.example.com uptime
 ``` 

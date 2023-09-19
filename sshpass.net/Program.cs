@@ -127,7 +127,7 @@ namespace sshpass.net
             {
                 Console.Write("sshpass: ");
                 Console.WriteLine(ex.Message);
-                Console.WriteLine("Try `sshpass.net --help` for more information.");
+                Console.WriteLine("Try `sshpass-net --help` for more information.");
                 return;
             }
 
@@ -139,7 +139,7 @@ namespace sshpass.net
 
             if (arguments.ShowVersion || arguments.Verbose)
             {
-                Console.WriteLine("sshpass.net:");
+                Console.WriteLine("sshpass-net:");
                 Console.WriteLine($"  Version {Assembly.GetEntryAssembly()?.GetName().Version}");
                 Console.WriteLine("  (C) 2023 Computer Code Blue LLC");
                 Console.WriteLine("Based on sshpass");
@@ -176,7 +176,7 @@ namespace sshpass.net
 
         static void ShowHelp(OptionSet p)
         {
-            Console.WriteLine("Usage: sshpass.net [OPTIONS]+ command parameters");
+            Console.WriteLine("Usage: sshpass-net [OPTIONS]+ command parameters");
             Console.WriteLine("Pass a password to ssh for automation.");
             Console.WriteLine("Basic usage: sshpass.net user@host command. Password is accepted via STDIN.");
             Console.WriteLine();
@@ -192,14 +192,14 @@ namespace sshpass.net
                 string[] userhost = host.Split('@');
                 if (userhost.Length != 2)
                 {
-                    Console.WriteLine($"sshpass.net: {host} is not the correct format. Host should be formatted as user@host.");
+                    Console.WriteLine($"sshpass-net: {host} is not the correct format. Host should be formatted as user@host.");
                     return null;
                 }
                 return userhost;
             }
             else
             {
-                Console.WriteLine($"sshpass.net: No host was passed. Host should be formatted as user@host.");
+                Console.WriteLine($"sshpass-net: No host was passed. Host should be formatted as user@host.");
                 return null;
             }
         }
@@ -231,7 +231,7 @@ namespace sshpass.net
                     {
                         Console.Write("sshpass: ");
                         Console.WriteLine(ex.Message);
-                        Console.WriteLine("Try `sshpass.net --help` for more information.");
+                        Console.WriteLine("Try `sshpass-net --help` for more information.");
                         return;
                     }
                     break;
@@ -251,15 +251,15 @@ namespace sshpass.net
                         }
                         else
                         {
-                            Console.WriteLine($"sshpass.net: File {arguments.FileName} had no data.");
+                            Console.WriteLine($"sshpass-net: File {arguments.FileName} had no data.");
                             return;
                         }
                     }
                     catch (Exception ex)
                     {
-                        Console.Write("sshpass: ");
+                        Console.Write("sshpass-net: ");
                         Console.WriteLine(ex.Message);
-                        Console.WriteLine("Try `sshpass.net --help` for more information.");
+                        Console.WriteLine("Try `sshpass-net --help` for more information.");
                         return;
                     }
                     break;
@@ -294,7 +294,7 @@ namespace sshpass.net
             {
                 Console.Write("sshpass.net: ");
                 Console.WriteLine(ex.Message);
-                Console.WriteLine("Try `sshpass --help` for more information.");
+                Console.WriteLine("Try `sshpass-net --help` for more information.");
                 return;
             }
         }
